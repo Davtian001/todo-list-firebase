@@ -15,13 +15,21 @@ Please see the mentioned digits from the image and check corresponding requireme
 
      ![image2](https://i.ibb.co/f8ZM3qc/sign-in.png)
       
-  * SignUp (send e-mail veryfication link)
+  * Sign-Up (send e-mail veryfication link)
     * Reactive form validators (async, sync)
-    * Real time e-mail validation (is busy email) (1)
-    * Reset Password with Email message (it will send confirmation link to selected email)
+    * Real time e-mail validation (is busy email) (1) async validation
+    * link to: Reset Password modal
     * link: open Sign-Up link
 
     ![image2](https://i.ibb.co/bNSxLv1/sign-uppng.png)
+    
+   * Reset-password (send e-mail veryfication link)
+    * Reset Password with Email message (it will send confirmation link to selected email and user can reset password)
+    * Real time e-mail validation (email must be registered) async validation
+
+    ![image2](https://i.ibb.co/ZMfbGDk/reset-pass.png)
+    
+    
 
 * Router Guards (canActivate, canLoad)
 * Page not found 404 
