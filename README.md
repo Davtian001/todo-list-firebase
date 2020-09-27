@@ -7,25 +7,22 @@
 Please see the mentioned digits from the image and check corresponding requirements.
 
 * Authentication 
-   * SignIn (remember Sesion)
-      ![image2](https://i.ibb.co/f8ZM3qc/sign-in.png)
-      * form validators (email, pass)
-      * show password (4)
-      * open Sign-Up link(3)
-      * Remember user (keep auth sesion)(2)
+   * Sign-In
+     * form validators (email, pass)
+     * show password (4)
+     * link: open Sign-Up link(3)
+     * Remember user (keep auth sesion)(2)
+     ![image2](https://i.ibb.co/f8ZM3qc/sign-in.png)
       
   * SignUp (send e-mail veryfication link)
-    
-    
     * Reactive form validators (async, sync)
-    * SignIn (remember Sesion)
-    * SignUp (send e-mail veryfication link)
-    * Real time e-mail validation (is busy email)
-    * Reset Password with Email message
-    * Log out 
+    * Real time e-mail validation (is busy email) (1)
+    * Reset Password with Email message (it will send confirmation link to selected email)
+    * link: open Sign-Up link
+    ![image2](https://i.ibb.co/bNSxLv1/sign-uppng.png)
 
-* Router Guards (canActivate, canActivateChild)
-* Page not found 404
+* Router Guards (canActivate, canLoad)
+* Page not found 404 
 
 
 ### Phase 2 done
