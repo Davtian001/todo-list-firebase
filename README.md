@@ -6,7 +6,7 @@
 ### Phase 1 done ###
 Please see the mentioned digits from the image and check corresponding requirements.
 
-* Authentication 
+* ### Authentication ###
    * Sign-In
      * form validators (email, pass)
      * show password (4)
