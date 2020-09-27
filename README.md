@@ -31,7 +31,7 @@ Please see the mentioned digits from the image and check corresponding requireme
     ![image2](https://i.ibb.co/q0ngY1d/reset-pass1.png)
     
 
-* Routing
+* ### Routing ###
   * Router Guards (canActivate, canLoad)
   * Not Found 404 (Page) 
 
