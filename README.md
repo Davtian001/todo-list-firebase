@@ -2,17 +2,16 @@
 
 
 
-### Screenshots
-![image2](https://i.ibb.co/bHGphh1/2.png)
-![image1](https://i.ibb.co/kDVBfp4/1.png)
-
-
 
 ### Phase 1 done ###
 
 * Authentication 
-    * Form Validators (handling errors)
-    * SignIn (remember my - Sesion)
+   * SignIn (remember Sesion)
+      * form validators (sync)
+
+
+    * Reactive form validators (async, sync)
+    * SignIn (remember Sesion)
     * SignUp (send e-mail veryfication link)
     * Real time e-mail validation (is busy email)
     * Reset Password with Email message
@@ -35,6 +34,11 @@
     * Complate Task status
 
 * Auto deactivate task status when ending Time  ...setTimeout( endTime - new Date() )
+
+### Screenshots
+![image2](https://i.ibb.co/bHGphh1/2.png)
+![image1](https://i.ibb.co/kDVBfp4/1.png)
+
 
 
 
