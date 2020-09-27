@@ -3,6 +3,12 @@
 
 Please see the mentioned digits from the images and check corresponding requirements.
 
+
+* ### Routing ###
+  * Router Guards (canActivate, canLoad)
+  * Not Found 404 (Page) 
+  
+  
 * ### Authentication ###
    * Sign-In
      * form validators (email, pass)
@@ -27,17 +33,24 @@ Please see the mentioned digits from the images and check corresponding requirem
     ![image2](https://i.ibb.co/ZMfbGDk/reset-pass.png)
     ![image2](https://i.ibb.co/q0ngY1d/reset-pass1.png)
     
+    
+    
+  * Dashboard
+    * Table with local pagination
+    * Search by task name(local)
+    * Task Actions
+      * Edit (it should open the modal above)
+        ![image2](https://i.ibb.co/6ZdDQLk/table1png.png)
+        
+      * Change status
+      * Delete (with confirmation)
+  
+  
+    * ![image2](https://i.ibb.co/6ZdDQLk/table1png.png)
 
-* ### Routing ###
-  * Router Guards (canActivate, canLoad)
-  * Not Found 404 (Page) 
 
 
-### Phase 2 done
-
-* Database Angular Firebase
-* Subscribe data base valueChanges
-* Popup Confirms access
+### Database Angular Firebase ###
 * Dashboard
     * Tasks list
     * Add Task (name, description, endTime)
