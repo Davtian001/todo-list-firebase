@@ -10,7 +10,7 @@ Please see the mentioned digits from the images and check corresponding requirem
   
   
 * ### Authentication ###
-   * Sign-In
+   * ## Sign-In ##
      * form validators (email, pass)
      * show password (4)
      * link: open Sign-Up link(3)
