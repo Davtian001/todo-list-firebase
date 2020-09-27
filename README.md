@@ -28,6 +28,7 @@ Please see the mentioned digits from the image and check corresponding requireme
     * Real time e-mail validation (email must be registered) async validation
 
     ![image2](https://i.ibb.co/ZMfbGDk/reset-pass.png)
+    ![image2](https://i.ibb.co/q0ngY1d/reset-pass1.png)
     
     
 
