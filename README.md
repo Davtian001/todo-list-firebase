@@ -39,8 +39,11 @@ Please see the mentioned digits from the images and check corresponding requirem
     * Table with local pagination
     * Search by task name(local)
     * Task Actions
+      
+      ![image2](https://i.ibb.co/6ZdDQLk/table1png.png)
+      
       * Edit Task (title, description), (it should open the modal above)
-        ![image2](https://i.ibb.co/6ZdDQLk/table1png.png)
+        ![image2](https://i.ibb.co/phSgDsk/editPNG.png)
         
       * Change status
       * Delete (popup-confirm)
