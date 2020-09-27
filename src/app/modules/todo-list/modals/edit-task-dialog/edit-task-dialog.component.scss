@@ -1,0 +1,16 @@
+.edit-dialog {
+
+  &__main {
+    flex-direction: column;
+  }
+
+  &__field {
+    width: -webkit-fill-available;
+
+    textarea {
+      resize: none;
+      height: 150px;
+      width: 100%;
+    }
+  }
+}

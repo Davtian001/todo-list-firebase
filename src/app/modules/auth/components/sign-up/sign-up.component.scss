@@ -1,0 +1,29 @@
+.sign-up {
+    padding: 1.5em 1.8em;
+
+    & mat-form-field {
+        margin-bottom: 0em;
+        width: 90%;
+        font-size: 12px;
+        transition: margin 0.3s;
+        color: #446E8E;
+    }
+
+    .mat-error {
+        font-size: 109%
+    }
+    .mat-label {
+        font-size: 104%
+    }
+
+    &__to-sign-in {
+        text-align: center;
+        font-size: 0.8em;
+        margin-top: 1.5em;
+        color: gray;
+        .redirect{
+            margin: 3px;
+            font-size: 1.1em;
+        }
+    }
+}

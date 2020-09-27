@@ -1,0 +1,38 @@
+<div class="edit-dialog">
+    <h1 mat-dialog-title>Edit Task</h1>
+    <form class="edit-dialog__main flex">
+        <form [formGroup]="editTaskForm" mat-dialog-content>
+            <mat-form-field class="edit-dialog__field">
+                <mat-label>Edit name</mat-label>
+                <input matInput
+                       formControlName="name" />
+                <mat-error class="no-padding">
+                    <app-control-message [control]="editTaskForm.controls.name"></app-control-message>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="edit-dialog__field">
+                <mat-label>Edit dsc.</mat-label>
+                <textarea matInput
+                          formControlName="description">
+                </textarea>
+                <mat-error class="no-padding">
+                    <app-control-message [control]="editTaskForm.controls.description"></app-control-message>
+                </mat-error>
+            </mat-form-field>
+        </form>
+        <div mat-dialog-actions>
+            <button mat-button
+                    mat-dialog-close>
+                Close
+            </button>
+            <button mat-button
+                    type="submit"
+                    mat-flat-button
+                    [disabled]="editTaskForm.invalid"
+                    [mat-dialog-close]="editedTask"
+                    cdkFocusInitial>
+                Edit
+            </button>
+        </div>
+    </form>
+</div>

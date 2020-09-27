@@ -1,0 +1,16 @@
+<div class="actions">
+  <button mat-icon-button
+          (click)="$event.stopPropagation()"
+          [matMenuTriggerFor]="menu"
+          aria-label="Example icon-button with a menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu>
+    <button *ngFor="let action of taskActions"
+            mat-menu-item
+            (click)="onSelectAction.emit(action)">
+      <mat-icon>{{action.icon}}</mat-icon>
+      <span>{{action.name}}</span>
+    </button>
+  </mat-menu>
+</div>

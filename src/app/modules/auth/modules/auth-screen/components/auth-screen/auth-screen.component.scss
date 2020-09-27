@@ -1,0 +1,14 @@
+.auth-screen-wrapper {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../../../../../../assets/fa/auth-bg.jpg");
+
+    & mat-toolbar{
+        background: white;
+        margin: 5% 8% -8%;
+        max-width: 400px;
+        border-radius: 15px;
+    }
+}

@@ -1,0 +1,114 @@
+<div class="sign-up">
+    <button class="close sticky"
+            type="button"
+            matTooltip="Close"
+            tabindex="-1"
+            (mousedown)="prevent()"
+            mat-dialog-close>&times;
+    </button>
+    <h3 mat-dialog-title class="title">
+        Create Account
+    </h3>
+    <form autocomplete="off" (ngSubmit)="onSubmit()" [formGroup]="registerForm">
+        <div class="sign-up__form">
+            <mat-form-field appearance="outline">
+                <mat-label>First Name</mat-label>
+                <input formControlName="fullName"
+                       matInput maxlength="25"
+                />
+                <mat-error *ngIf="fullName.invalid">
+                    <app-control-message [control]="fullName"></app-control-message>
+                    <br>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="sign-up-form">
+            <mat-form-field appearance="outline"
+                            [class.indent]="email.errors">
+                <mat-label>E-mail</mat-label>
+                <mat-spinner diameter="20"
+                             matSuffix *ngIf="email.pending">
+                </mat-spinner>
+                <img *ngIf="email.valid"
+                     class="icon"
+                     src="assets/fa/marked.png"
+                     alt="OK"
+                     matSuffix/>
+                <img *ngIf="!email.pending && busyEmailError"
+                     class="icon"
+                     src="assets/fa/denied.png"
+                     alt="ERROR"
+                     matSuffix/>
+                <input formControlName="email"
+                       matInput>
+                <mat-error *ngIf="email.invalid">
+                    <app-control-message [control]="email"></app-control-message>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="sign-up-form">
+            <mat-form-field appearance="outline" class="indent">
+                <mat-label>Password</mat-label>
+                <mat-hint align="end">At least 8 characters</mat-hint>
+                <input formControlName="password"
+                       [type]="hidePassword ? 'password' : 'text'"
+                       matInput/>
+                <mat-icon *ngIf="hidePassword"
+                          [class.invalid-icon]="false"
+                          (click)="hidePassword = !hidePassword"
+                          (mousedown)="prevent()"
+                          matSuffix
+                          matTooltip="show password">
+                    visibility_off
+                </mat-icon>
+                <mat-icon *ngIf="!hidePassword"
+                          class="invalid-icon"
+                          (click)="hidePassword = !hidePassword"
+                          (mousedown)="prevent()"
+                          matSuffix
+                          matTooltip="hide password">
+                    visibility
+                </mat-icon>
+                <mat-error *ngIf="password.invalid">
+                    <app-control-message [control]="password"></app-control-message>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="sign-up-form">
+            <mat-form-field appearance="outline">
+                <mat-label>Password Confirm</mat-label>
+                <img matSuffix class="icon" src="assets/fa/marked.png" alt="OK" *ngIf="passConfirm.valid">
+                <input formControlName="passwordConfirm" type="password" matInput>
+                <mat-error *ngIf="passConfirm.invalid">
+                    <app-control-message [control]="passConfirm"></app-control-message>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <button mat-raised-button
+                type="submit"
+                class="submit-btn"
+                [disabled]="registerForm.invalid || processing"
+                [matTooltip]="registerForm.invalid ? 'Form is not valid yet' : ''"
+                [class.invalid-hover]="registerForm.invalid">
+            Register
+        </button>
+    </form>
+    <div class="sign-up__to-sign-in">
+        Already registered ?
+        <span class="redirect"
+              (mousedown)="prevent()"
+              (click)="toSignIn()">
+            Sign-in
+        </span>
+    </div>
+    <hr *ngIf="!submitted">
+    <mat-progress-bar
+            *ngIf="submitted"
+            mode="indeterminate">
+    </mat-progress-bar>
+    <span class="sign-up__privacy-info">
+        By creating an account, you agree to
+        <b>Tasks Management</b>
+        conditions of use and privacy policy.
+  </span>
+</div>

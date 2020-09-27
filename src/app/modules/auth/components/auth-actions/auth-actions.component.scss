@@ -1,0 +1,11 @@
+.auth-actions-wrapper {
+  padding: 40px;
+  background: white;
+  &__auth-info {
+    margin-left: 7px;
+  }
+
+  & button {
+    margin: 4px;
+  }
+}

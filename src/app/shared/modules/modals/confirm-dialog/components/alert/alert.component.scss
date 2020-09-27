@@ -1,0 +1,25 @@
+.alert-wrapper {
+  max-width: 800px;
+  min-width: 250px;
+
+  &__actions {
+    button {
+      margin: 5px auto;
+      outline: none;
+      box-shadow: 1px 1px 5px rgb(148, 148, 148);
+      width: 80%;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__message {
+    padding-right: 30px;
+    text-align: left;
+    font-family: sans-serif;
+    font-size: 13px;
+  }
+
+  &--indent {
+    margin-bottom: 30px;
+  }
+}

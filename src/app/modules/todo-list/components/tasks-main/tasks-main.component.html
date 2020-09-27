@@ -1,0 +1,103 @@
+<div class="task-listing">
+    <div class="task-listing__top flex">
+        <mat-form-field class="task-listing__search-container">
+            <mat-label>Search by name</mat-label>
+            <input #searchInput
+                    matInput
+                   (input)="applyTableFilter(searchInput.value)"
+                   type="text">
+            <button *ngIf="searchInput.value"
+                    mat-button
+                    matSuffix
+                    mat-icon-button
+                    aria-label="Clear"
+                    (click)="applyTableFilter(''); searchInput.value = ''">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-form-field>
+        <div class="task-listing__auth flex">
+            <p class="task-listing__user-name">{{currentUser?.displayName}}</p>
+            <button mat-raised-button
+                    color="primary"
+                    matTooltip="Sign-out from account"
+                    (click)="signOut()">SignOut
+            </button>
+        </div>
+    </div>
+    <div class="tasks-table flex">
+        <div class="tasks-table__loader"
+             *ngIf="isLoadingResults">
+            <mat-spinner [diameter]="60"></mat-spinner>
+        </div>
+        <table mat-table
+               matSort
+               matSortDisableClear
+               matSortDirection="desc"
+               [dataSource]="dataSource"
+               multiTemplateDataRows>
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                    <span class="uppercase">name</span>
+                </th>
+                <td mat-cell *matCellDef="let row">
+                    <span class="tasks-table__name">{{row.name}}</span>
+                </td>
+            </ng-container>
+            <ng-container matColumnDef="startDate">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                    <span class="uppercase">start date</span>
+                </th>
+                <td mat-cell *matCellDef="let element">{{element.startDate | date: 'medium'}} </td>
+            </ng-container>
+            <ng-container matColumnDef="endDate">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                    <span class="uppercase">end date</span>
+                </th>
+                <td mat-cell *matCellDef="let element"> {{element.endDate | date: 'medium'}}</td>
+            </ng-container>
+            <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header="done">
+                    <span class="uppercase">status</span>
+                </th>
+                <td mat-cell *matCellDef="let element">
+                    <mat-icon>{{element.done ? 'done' : 'hourglass_full'}}</mat-icon>
+                </td>
+            </ng-container>
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef>
+                    <span class="uppercase">actions</span>
+                </th>
+                <td mat-cell *matCellDef="let element">
+                    <app-task-actions [task]="element"
+                                      (onSelectAction)="onSelectAction($event, element)">
+                    </app-task-actions>
+                </td>
+            </ng-container>
+            <ng-container matColumnDef="expandedDetail">
+                <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
+                    <div class="tasks-table__details"
+                         [@detailExpand]="element === expandedElement ? 'expanded' : 'collapsed'">
+                        <div class="tasks-table__element flex">
+                            <p>{{element.done ? 'Done' : 'Pending'}}</p>
+                            <mat-icon class="tasks-table__element__status-icon">{{element.done ? 'done' : 'hourglass_full'}}</mat-icon>
+                        </div>
+                        <div class="tasks-table__element__description">
+                            <span class="tasks-table__element__description__label">Description: </span>
+                            <span class="tasks-table__element__description__content">{{element.description}} </span>
+                        </div>
+                    </div>
+                </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+            <tr mat-row *matRowDef="let element; columns: columnsToDisplay;"
+                class="tasks-table__element-row"
+                [class.tasks-table__element-row--expired]="element.expired"
+                [class.expanded-row]="expandedElement === element"
+                (click)="toggleExpandedElement(element)">
+            </tr>
+            <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="tasks-table__detail-row"></tr>
+        </table>
+    </div>
+    <mat-paginator [pageSize]="pageSize" showFirstLastButtons></mat-paginator>
+    <add-task-panel></add-task-panel>
+</div>

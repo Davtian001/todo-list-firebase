@@ -1,0 +1,62 @@
+<section class="create-task">
+    <form class="create-task__form" [formGroup]="createTaskForm">
+        <div class="create-task__fields flex">
+            <div class="create-task__date-field">
+                <mat-form-field [color]="datePickerTheme" appearance="fill">
+                    <mat-label>Start date</mat-label>
+                    <input matInput
+                           placeholder="-/-/-"
+                           readonly
+                           formControlName="startDate"
+                           [min]="currentDate"
+                           [max]="createTaskForm.get('endDate').value"
+                           [matDatepicker]="start"
+                    />
+                    <mat-datepicker-toggle matSuffix [for]="start"></mat-datepicker-toggle>
+                    <mat-datepicker touchUi #start color="primary"></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="create-task__date-field">
+                <mat-form-field [color]="datePickerTheme" appearance="fill">
+                    <mat-label>End date</mat-label>
+                    <input matInput
+                           readonly
+                           formControlName="endDate"
+                           placeholder="-/-/-"
+                           [min]="createTaskForm.get('startDate').value || currentDate"
+                           [matDatepicker]="end"
+                    />
+                    <mat-datepicker-toggle matSuffix [for]="end"></mat-datepicker-toggle>
+                    <mat-datepicker touchUi #end color="primary"></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="create-task__field">
+                <mat-form-field>
+                    <input formControlName="name"
+                           matInput
+                           placeholder="Name"
+                           required>
+                    <mat-error>
+                        <app-control-message [control]="name"></app-control-message>
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="description"
+                           matInput
+                           placeholder="Description"/>
+                    <mat-error>
+                        <app-control-message [control]="description"></app-control-message>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <button mat-raised-button
+                    type="button"
+                    color="primary"
+                    class="create-task__submit"
+                    (click)="createTask()"
+                    [disabled]="!createTaskForm.valid">
+                Add Task
+            </button>
+        </div>
+    </form>
+</section>

@@ -1,0 +1,25 @@
+.create-task {
+    &__fields {
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    &__date-field {
+        & mat-form-field {
+            margin: 12px;
+        }
+    }
+
+    &__field {
+        padding-top: 10px;
+
+        & mat-form-field {
+            margin: 12px;
+        }
+    }
+
+    &__submit {
+        margin-left: 4px;
+        margin-right: 10px;
+    }
+}

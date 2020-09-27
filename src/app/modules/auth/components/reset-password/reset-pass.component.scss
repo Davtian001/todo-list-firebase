@@ -1,0 +1,16 @@
+.reset-password {
+  padding: 1.5em 1.2em;
+
+  &__content {
+    max-width: 800px;
+    min-width: 250px;
+  }
+
+  & mat-form-field {
+    width: 100%;
+    font-size: 12px;
+    transition: margin 0.3s;
+    color: #446E8E;
+  }
+}
+

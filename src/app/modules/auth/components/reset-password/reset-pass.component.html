@@ -1,0 +1,30 @@
+<div class="reset-password">
+    <button class="close sticky"
+            tabindex="-1"
+            type="button" matTooltip="Close"
+            mat-dialog-close>&times;
+    </button>
+    <h3 mat-dialog-title class="title">
+        Password Reset
+    </h3>
+    <div class="reset-password__content">
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>E-mail</mat-label>
+                <mat-hint align="end">Password reset link will be sent to this email</mat-hint>
+                <input [formControl]="email" matInput />
+                <mat-error>
+                    <app-control-message [control]="email"></app-control-message>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <button mat-raised-button
+                class="submit-btn wide-btn"
+                [disabled]="email.invalid || email.pending"
+                (click)="resetPassword()">
+            Send Password Reset Link
+        </button>
+        <div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,77 @@
+<div class="sign-in-wrapper">
+    <button class="close sticky"
+            type="button"
+            matTooltip="Close"
+            tabindex="-1"
+            mat-dialog-close>&times;
+    </button>
+    <h3 mat-dialog-title class="title">
+        Sign-In
+    </h3>
+    <div class="content">
+        <form autocomplete="off" [formGroup]="signInForm">
+            <div class="sign-in-form">
+                <mat-form-field appearance="outline">
+                    <mat-label>E-mail</mat-label>
+                    <mat-hint align="end">Type your valid e-mail</mat-hint>
+                    <input formControlName="email" matInput>
+                    <mat-error>
+                        <app-control-message [control]="signInForm.controls.email"></app-control-message>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="sign-in-form">
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <mat-hint align="end">You can reset your password below</mat-hint>
+                    <input formControlName="password"
+                           matInput
+                           [type]="hidePassword ? 'password' : 'text'">
+                    <mat-error>
+                        <app-control-message [control]="signInForm.controls.password"></app-control-message>
+                    </mat-error>
+                    <mat-icon matSuffix
+                              (click)="hidePassword = !hidePassword"
+                              *ngIf="hidePassword"
+                              matTooltip="show password">
+                        visibility_off
+                    </mat-icon>
+                    <mat-icon matSuffix
+                              (click)="hidePassword = !hidePassword"
+                              *ngIf="!hidePassword"
+                              matTooltip="hide password">
+                        visibility
+                    </mat-icon>
+                </mat-form-field>
+            </div>
+            <button [disabled]="signInForm.invalid || processing"
+                    mat-raised-button
+                    class="submit-btn wide-btn"
+                    (click)="signIn()">
+                Sign-in
+            </button>
+        </form>
+        <div class="sign-in-wrapper__additional-actions">
+            <div>
+                <mat-checkbox
+                        [formControl]="rememberMe"
+                        [class.active]="rememberMe.value"
+                        class="sign-in-wrapper__remember-me"
+                        color="primary">Remember me
+                </mat-checkbox>
+                <span class="sign-in-wrapper__forgot-pass redirect"
+                      (click)="toResetPassword()">
+                    Forgot Password ?
+                </span>
+            </div>
+            <div class="sign-in-wrapper__to-sign-up">
+                Don't have an account yet ?
+                <span class="redirect"
+                      (click)="toSignUp()">
+                    Sign-up
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<mat-progress-bar *ngIf="processing" mode="indeterminate"></mat-progress-bar>
