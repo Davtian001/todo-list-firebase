@@ -39,32 +39,16 @@ Please see the mentioned digits from the images and check corresponding requirem
     * Table with local pagination
     * Search by task name(local)
     * Task Actions
-      * Edit (it should open the modal above)
+      * Edit Task (title, description), (it should open the modal above)
         ![image2](https://i.ibb.co/6ZdDQLk/table1png.png)
         
       * Change status
-      * Delete (with confirmation)
+      * Delete (popup-confirm)
+      
+    * Create new Task panel
+    * Expired ticket date
+      ![image2](https://i.ibb.co/tDd42vT/table2.png)
   
   
-    * ![image2](https://i.ibb.co/6ZdDQLk/table1png.png)
-
-
-
 ### Database Angular Firebase ###
-* Dashboard
-    * Tasks list
-    * Add Task (name, description, endTime)
-    * Delete Task (popup-confirm)
-    * Edit Task (title, description), (popup-confirm)
-    * Complate Task status
-
-* Auto deactivate task status when ending Time  ...setTimeout( endTime - new Date() )
-
-### Screenshots
-
-![image1](https://i.ibb.co/kDVBfp4/1.png)
-
-
-
-
-
+* Created mock data for new users. By default, the newly registered user will have some tickets
