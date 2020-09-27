@@ -1,7 +1,7 @@
 # Todo List
 
 
-Please see the mentioned digits from the image and check corresponding requirements.
+Please see the mentioned digits from the images and check corresponding requirements.
 
 * ### Authentication ###
    * Sign-In
