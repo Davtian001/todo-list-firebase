@@ -7,7 +7,7 @@
 Please see the mentioned digits from the image and check corresponding requirements.
 
 * Authentication 
-    ![image2](https://ibb.co/0B1q0mw.png)
+    ![image2](https://i.ibb.co/f8ZM3qc/sign-in.png)
    * SignIn (remember Sesion)
       * form validators (email, pass)
       * show password (4)
@@ -43,7 +43,7 @@ Please see the mentioned digits from the image and check corresponding requireme
 * Auto deactivate task status when ending Time  ...setTimeout( endTime - new Date() )
 
 ### Screenshots
-![image2](https://i.ibb.co/bHGphh1/2.png)
+
 ![image1](https://i.ibb.co/kDVBfp4/1.png)
 
 
