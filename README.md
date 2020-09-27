@@ -34,7 +34,7 @@ Please see the mentioned digits from the images and check corresponding requirem
     ![image2](https://i.ibb.co/q0ngY1d/reset-pass1.png)
     
     
-  * Dashboard
+  * ### Dashboard
     * Table with local pagination
     * Search by task name(local)
     * Task Actions
