@@ -4,12 +4,19 @@
 
 
 ### Phase 1 done ###
+Please see the mentioned digits from the image and check corresponding requirements.
 
 * Authentication 
+    ![image2](https://ibb.co/0B1q0mw.png)
    * SignIn (remember Sesion)
-      * form validators (sync)
-
-
+      * form validators (email, pass)
+      * show password (4)
+      * open Sign-Up link(3)
+      * Remember user (keep auth sesion)(2)
+      
+  * SignUp (send e-mail veryfication link)
+    
+    
     * Reactive form validators (async, sync)
     * SignIn (remember Sesion)
     * SignUp (send e-mail veryfication link)
