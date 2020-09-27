@@ -12,6 +12,7 @@ Please see the mentioned digits from the image and check corresponding requireme
      * show password (4)
      * link: open Sign-Up link(3)
      * Remember user (keep auth sesion)(2)
+
      ![image2](https://i.ibb.co/f8ZM3qc/sign-in.png)
       
   * SignUp (send e-mail veryfication link)
@@ -19,6 +20,7 @@ Please see the mentioned digits from the image and check corresponding requireme
     * Real time e-mail validation (is busy email) (1)
     * Reset Password with Email message (it will send confirmation link to selected email)
     * link: open Sign-Up link
+
     ![image2](https://i.ibb.co/bNSxLv1/sign-uppng.png)
 
 * Router Guards (canActivate, canLoad)
