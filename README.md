@@ -7,8 +7,8 @@
 Please see the mentioned digits from the image and check corresponding requirements.
 
 * Authentication 
-    ![image2](https://i.ibb.co/f8ZM3qc/sign-in.png)
    * SignIn (remember Sesion)
+      ![image2](https://i.ibb.co/f8ZM3qc/sign-in.png)
       * form validators (email, pass)
       * show password (4)
       * open Sign-Up link(3)
