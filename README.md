@@ -30,10 +30,10 @@ Please see the mentioned digits from the image and check corresponding requireme
     ![image2](https://i.ibb.co/ZMfbGDk/reset-pass.png)
     ![image2](https://i.ibb.co/q0ngY1d/reset-pass1.png)
     
-    
 
-* Router Guards (canActivate, canLoad)
-* Page not found 404 
+* Routing
+  * Router Guards (canActivate, canLoad)
+  * Not Found 404 (Page) 
 
 
 ### Phase 2 done
