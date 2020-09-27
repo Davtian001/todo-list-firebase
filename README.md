@@ -1,9 +1,6 @@
 # Todo List
 
 
-
-
-### Phase 1 done ###
 Please see the mentioned digits from the image and check corresponding requirements.
 
 * ### Authentication ###
