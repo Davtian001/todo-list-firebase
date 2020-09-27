@@ -23,7 +23,7 @@ Please see the mentioned digits from the image and check corresponding requireme
 
     ![image2](https://i.ibb.co/bNSxLv1/sign-uppng.png)
     
-   * Reset-password (send e-mail veryfication link)
+  * Reset-password (send e-mail veryfication link)
     * Reset Password with Email message (it will send confirmation link to selected email and user can reset password)
     * Real time e-mail validation (email must be registered) async validation
 
