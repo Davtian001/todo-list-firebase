@@ -59,7 +59,7 @@ export class CreateTaskComponent implements OnInit {
             description: this.formBuilder.control('', [
                 Validators.required,
                 Validators.minLength(10),
-                Validators.maxLength(1000)
+                Validators.maxLength(1600)
             ]),
             startDate: this.formBuilder.control('', Validators.required),
             endDate: this.formBuilder.control('', Validators.required)

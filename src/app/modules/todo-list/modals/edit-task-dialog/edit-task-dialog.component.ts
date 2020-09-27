@@ -35,7 +35,7 @@ export class EditTaskDialogComponent implements OnInit {
             description: this.formBuilder.control('', [
                 Validators.required,
                 Validators.minLength(10),
-                Validators.maxLength(1000)
+                Validators.maxLength(1600)
             ]),
         });
         this.editTaskForm.patchValue(this.data);
