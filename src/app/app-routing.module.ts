@@ -14,7 +14,7 @@ const routes: Routes = [
         canLoad: [NoAuthGuard],
         data: {
           guard: {
-              routRedirectUrl: 'todo-list' // navigate if already registered
+              routRedirectUrl: 'todo-list' // navigate if already legged in
           }
         },
         loadChildren: './modules/auth/modules/auth-screen/auth-screen.module#AuthScreenModule',
