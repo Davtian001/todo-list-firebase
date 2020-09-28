@@ -9,7 +9,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AppComponent } from './components/app-root/app.component';
 import { AuthGuard } from "./modules/auth/guards/auth.guard";
 import { NoAuthGuard } from "./modules/auth/guards/no-auth.guard";
-// import { HashLocationStrategy, LocationStrategy, APP_BASE_HREF } from '@angular/common';
+import { HashLocationStrategy, LocationStrategy, APP_BASE_HREF } from '@angular/common';
 
 @NgModule({
     declarations: [
@@ -27,7 +27,11 @@ import { NoAuthGuard } from "./modules/auth/guards/no-auth.guard";
     ],
     providers: [
         AuthGuard,
-        NoAuthGuard
+        NoAuthGuard,
+        {
+            provide: LocationStrategy,
+            useClass: HashLocationStrategy
+        }
     ],
     bootstrap: [AppComponent],
 })
