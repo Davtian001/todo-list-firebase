@@ -53,3 +53,6 @@ Please see the mentioned digits from the images and check corresponding requirem
   
 ### Database Angular Firebase ###
 * Created mock data for new users. By default, the newly registered user will have some tickets
+
+
+https://davtian001.github.io/todo-list-firebase-dist/#/todo-list
