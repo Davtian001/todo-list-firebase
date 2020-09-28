@@ -29,9 +29,13 @@ import { HashLocationStrategy, LocationStrategy, APP_BASE_HREF } from '@angular/
         AuthGuard,
         NoAuthGuard,
         {
+            provide: APP_BASE_HREF,
+            useValue: '/'
+        },
+        {
             provide: LocationStrategy,
             useClass: HashLocationStrategy
-        }
+        },
     ],
     bootstrap: [AppComponent],
 })
