@@ -1,5 +1,5 @@
 # Todo List 
- ### Please review readmy file while opening the link https://davtian001.github.io/todo-list-firebase-dist
+ ### Please review description while opening the link https://davtian001.github.io/todo-list-firebase-dist
 
 
 Please see the mentioned digits from the images and check corresponding requirements.
