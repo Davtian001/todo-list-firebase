@@ -97,7 +97,7 @@
             </tr>
             <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="tasks-table__detail-row"></tr>
         </table>
+        <mat-paginator [pageSize]="pageSize" showFirstLastButtons></mat-paginator>
     </div>
-    <mat-paginator [pageSize]="pageSize" showFirstLastButtons></mat-paginator>
     <add-task-panel></add-task-panel>
 </div>
