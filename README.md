@@ -54,5 +54,5 @@ Please see the mentioned digits from the images and check corresponding requirem
   
 ### Database Angular Firebase ###
 * Created mock data for new users. By default, the newly registered user will have some tickets
-* DB (each user has a separated data store)
+* DB (each authenticated user has a separated data store)
   ![image2](https://i.ibb.co/0FsTqJp/11111.png)
